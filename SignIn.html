@@ -1,7 +1,141 @@
+<!DOCTYPE html>
 <html>
-<form action='SignIn.php' method='POST'>
-	Username <input type='text' name='user_name' /><br>
-	Password <input type='password' name='pass_word' />
-	<input type='submit' value='Sign In'/>
-</form>
+<head>
+	<style type="text/css">
+		.login {
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  margin: -150px 0 0 -150px;
+			  width: 300px;
+			  height: 300px;
+			  color: rgba(#fff, .85);
+			  display: inline-block;
+			  font-size: 16px;
+			  padding: 8px 12px;
+			  text-decoration: none;
+			 
+			  @include background-clip(padding-box);
+			  @include box-shadow(inset -1px 1px 0px rgba(255, 255, 255, 0.3),
+			  inset 1px 1px 0px rgba(255, 255, 255, 0.3)
+			  );
+			  
+			  background-color: rgba(#000, .1);
+			  @include background-image(linear-gradient(top, rgba(#000, .1), rgba(#000, .3)));
+			  h2 {
+				margin: .5em;
+				text-align: center;
+				//@include background-image(linear-gradient(#fff, #eee));
+				//@include background-clip(text);
+				//-webkit-text-fill-color: transparent;
+				text-shadow: 0 1px 2px rgba(#000,.5);
+				font-weight: 900;
+			  }
+			  input
+			   {
+				outline: none;
+				position: absolute;
+			  }
+			}
+
+			.user,
+			.password {
+			  font-size: 150%;
+			  color: black;
+			  @include box-sizing(border-box);
+			  height: 30px;
+			  padding: .3em 10px .3em 20px;
+			  width: 270px;
+			  background: rgba(#000, .3);
+			  border: 0;
+			  border-radius: 25px;
+			  box-shadow: 0 -1px 1px rgba(#fff, .8) inset;
+			}
+			.password {
+			  padding: .3em 10px .3em 20px;
+
+			}
+			[for="user"],
+			.user {
+			  top: 70px;
+			}
+			[for="password"],
+			.password,
+			input[type="submit"] {
+			  top: 150px;
+			}
+
+			[for="password"],
+			[for="user"],
+			{
+			  text-indent: -9999px;
+			  &:before {
+				  text-indent: 0;
+				  position: absolute;
+				  top: 12px;
+				  left: 15px;
+				  font-size: 120%;
+				  z-index: 1;
+			  }
+			}
+
+			.click {
+			  right: 17px;
+			  height: 43px;
+			  width: 250px;
+			  
+			  background-image:url(1.jpg);
+			  @include background-image(linear-gradient(to bottom, #8ff704, #1c8700));
+			  border: 0;
+			  border-radius: 0 25px 25px 0;
+			  box-shadow: 0 5px 2px #a6ee40 inset, 1px 1px 0 rgba(#000, .5);
+			  color: #fff;
+			  text-transform: uppercase;
+			  font-size: 110%;
+			  text-shadow: 1px 1px 0 rgba(#000, .5);
+			  text-align: center;
+			}
+			.sign{
+				right: 17px;
+			  height: 43px;
+			  width: 250px;
+			  
+			  background-image:url(1.jpg);
+			  @include background-image(linear-gradient(to bottom, #8ff704, #1c8700));
+			  border: 0;
+			  border-radius: 0 25px 25px 0;
+			  box-shadow: 0 5px 2px #a6ee40 inset, 1px 1px 0 rgba(#000, .5);
+			  color: #fff;
+			  text-transform: uppercase;
+			  font-size: 110%;
+			  text-shadow: 1px 1px 0 rgba(#000, .5);
+			  text-align: center;
+				}
+			body{
+				background-repeat:no-repeat;
+				background-position:center top;
+				background-image:url(1.jpg);
+				}
+
+		
+	
+	</style>
+</head>
+	<body>
+		<form action='SignIn.php' method='POST' id="login" class="login">
+			Username <input class="user" id="user" type='text' name='user_name' /><br>
+			Password <input  class="password" id="password" name='pass_word' /><br>
+			
+			 <input type='submit' class="sign" value='Sign In'/>
+		</form>
+		<form action="Info.php">
+			<input type="submit" class="click" value="Thông tin" />
+		</form>
+		<form action="Company.html">
+			<input type="submit" class="click" value="Các hãng hàng không" />
+		</form>
+		<form action="DatVe.html">
+			<input type="submit" class="click" value="Đặt vé" />
+		</form>
+	</body>
 </html>

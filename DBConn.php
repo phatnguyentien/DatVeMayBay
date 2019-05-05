@@ -7,7 +7,7 @@ class DBConn
 		$username = "root";
 		$password = "1234";
 		$dbname = "DatVeMayBay";
-		return new mysqli($servername, $username, $password, $dbname);
+		return new DBConn($servername, $username, $password, $dbname);
 	}
 };
 ?>
